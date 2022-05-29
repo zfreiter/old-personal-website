@@ -42,10 +42,20 @@ body {
   color: aliceblue;
   width: 100%;
   display: none;
+  position: relative;
 }
 
 .nav-item.show {
-  display: inline-block;
+  display: inherit;
+  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-left both;
+}
+@keyframes wipe-in-left {
+  from {
+    right: -999px;
+  }
+  to {
+    right: 0px;
+  }
 }
 
 #bars-open {
