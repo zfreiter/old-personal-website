@@ -154,6 +154,7 @@ p.intro {
 
 .picture {
   width: 100%;
+  border-radius: 8px;
   height: auto;
 }
 
