@@ -9,6 +9,7 @@ html {
 
 body {
   margin: 0px;
+  overflow-x: hidden;
 }
 
 /* Navagation Bar section*/
@@ -21,7 +22,7 @@ body {
 }
 
 .nav-item-top {
-  background-color: dimgrey;
+  background-color: #1a1f16;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -61,14 +62,18 @@ body {
   display: inherit;
   animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-left both;
 }
+.nav-item.show.four {
+  display: inherit;
+  animation: 3s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-left both;
+}
 @keyframes wipe-in-left {
   from {
-    right: -999px;
+    right: -100%;
     z-index: -1;
   }
   to {
-    background-color: rgb(134, 130, 130);
-    right: 0px;
+    background-color: #1e3f20;
+    right: 0%;
     z-index: -1;
   }
 }
@@ -98,12 +103,12 @@ body {
 .home:hover,
 #bars-open:hover,
 #x-close:hover {
-  color: aqua;
+  color: #94ecbe;
 }
 
 .nav-item:nth-child(n + 2):hover {
-  color: aqua;
-  outline: 1px solid aquamarine;
+  color: #94ecbe;
+  outline: 1px solid #94ecbe;
   outline-offset: -1.5px;
 }
 
@@ -117,6 +122,8 @@ body {
 .section:first-of-type {
   padding-top: 100px;
 }
+
+/* css for sections*/
 .section {
   padding-top: 200px;
 }
@@ -132,7 +139,7 @@ p.intro {
   max-width: 800px;
 }
 
-.bio-picture {
+.picture {
   width: 100%;
   height: auto;
   max-width: 800px;
@@ -143,16 +150,49 @@ p.intro {
   margin-top: 100px;
 }
 
-.skills-picture {
+/* form area */
+form {
   width: 100%;
-  height: auto;
+  padding: 20px 20px;
+}
+.grid-contact {
+  display: grid;
+  gap: 10px;
   max-width: 800px;
-  max-height: 800px;
+  margin: auto;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "name"
+    "email"
+    "message"
+    "submit"
+    "reset";
+}
+.name {
+  grid-area: name;
+}
+.email {
+  grid-area: email;
+}
+.message {
+  grid-area: message;
+}
+
+.submit {
+  color: aliceblue;
+  background-color: #1e3f20;
+  grid-area: submit;
+}
+
+.reset {
+  color: aliceblue;
+  background-color: #1e3f20;
+  grid-area: reset;
 }
 @media screen and (min-width: 680px) {
   /* Navagation Bar section*/
   .nav-container {
-    background-color: dimgrey;
+    background-color: #1a1f16;
     flex-direction: row;
     justify-content: center;
   }
@@ -164,14 +204,25 @@ p.intro {
   }
 
   .nav-item-top {
-    background-color: dimgrey;
+    background-color: #1a1f16;
     width: auto;
   }
 
   .nav-item {
-    background-color: dimgrey;
+    background-color: #1a1f16;
     display: inline;
     padding: 30px 20px;
     width: auto;
+  }
+
+  /* Form */
+  .grid-contact {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "name email"
+      "message message"
+      "submit reset";
   }
 }

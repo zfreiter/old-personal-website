@@ -23,6 +23,7 @@
       <a href="#about" class="nav-item one">About</a>
       <a href="#skill" class="nav-item two">Skills</a>
       <a href="#project" class="nav-item three">Projects</a>
+      <a href="#contact" class="nav-item four">Contact</a>
     </nav>
     <!-- div class that wraps the sections -->
     <div class="body-container">
@@ -37,7 +38,7 @@
             <img
               src="images/profile.jpg"
               alt="Bio picture of Zach Freiter"
-              class="bio-picture"
+              class="picture"
             />
           </figure>
           <!-- Short introduction -->
@@ -58,7 +59,7 @@
             <img
               src="images/vscode.jpg"
               alt="Computer screen picture of computer code"
-              class="skills-picture"
+              class="picture"
             />
           </figure>
           <p>Portland State University experince classes taken.</p>
@@ -76,10 +77,56 @@
             <img
               src="images/vscode.jpg"
               alt="Computer screen picture of computer code"
-              class="skills-picture"
+              class="picture"
             />
           </figure>
           <p>projects at psu so far</p>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <!-- flex-container for each section -->
+        <div class="flex-container">
+          <!-- skills header -->
+          <h2 class="project-into">contact</h2>
+          <form
+            id="contact-form"
+            action="mailto:someone@example.com"
+            method="post"
+            enctype="text/plain"
+          >
+            <div class="grid-contact">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="name"
+                placeholder="Your name"
+              />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="email"
+                placeholder="Your email"
+              />
+
+              <textarea
+                name="message"
+                id="message"
+                class="message"
+                cols="30"
+                rows="10"
+                placeholder="Your message goes here"
+              ></textarea>
+              <button type="submit" form="contact-form" class="submit">
+                Submit
+              </button>
+              <button type="reset" form="contact-form" class="reset">
+                Reset
+              </button>
+            </div>
+          </form>
         </div>
       </section>
     </div>
