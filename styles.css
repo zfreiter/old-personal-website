@@ -11,8 +11,8 @@ body {
   margin: 0px;
 }
 
+/* Navagation Bar section*/
 .nav-container {
-  background-color: dimgrey;
   display: flex;
   flex-direction: column;
   position: sticky;
@@ -21,6 +21,7 @@ body {
 }
 
 .nav-item-top {
+  background-color: dimgrey;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -28,14 +29,13 @@ body {
 }
 
 .home {
-  padding: 20px 20px;
+  padding: 30px 20px;
   text-decoration: none;
   font-size: x-large;
   color: aliceblue;
 }
 
 .nav-item {
-  background-color: dimgrey;
   font-size: x-large;
   padding: 10px 20px;
   text-decoration: none;
@@ -47,21 +47,36 @@ body {
 
 .nav-item.show {
   display: inherit;
+  animation: 1.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-left both;
+}
+.nav-item.show.one {
+  display: inherit;
+  animation: 1.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-left both;
+}
+.nav-item.show.two {
+  display: inherit;
+  animation: 2s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-left both;
+}
+.nav-item.show.three {
+  display: inherit;
   animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-left both;
 }
 @keyframes wipe-in-left {
   from {
     right: -999px;
+    z-index: -1;
   }
   to {
+    background-color: rgb(134, 130, 130);
     right: 0px;
+    z-index: -1;
   }
 }
 
 #bars-open {
   color: aliceblue;
   font-size: x-large;
-  padding: 20px 20px;
+  padding: 30px 20px;
   display: inline-block;
 }
 
@@ -76,7 +91,7 @@ body {
 #x-close {
   color: aliceblue;
   font-size: x-large;
-  padding: 20px 20px;
+  padding: 30px 20px;
   display: none;
 }
 
@@ -92,8 +107,52 @@ body {
   outline-offset: -1.5px;
 }
 
+/* Body container*/
+.body-container {
+  text-align: center;
+  justify-content: center;
+}
+
+/* First section -> About me */
+.section:first-of-type {
+  padding-top: 100px;
+}
+.section {
+  padding-top: 200px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+p.intro {
+  margin: auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+.bio-picture {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  max-height: 800px;
+}
+
+.intro-skills {
+  margin-top: 100px;
+}
+
+.skills-picture {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  max-height: 800px;
+}
 @media screen and (min-width: 680px) {
+  /* Navagation Bar section*/
   .nav-container {
+    background-color: dimgrey;
     flex-direction: row;
     justify-content: center;
   }
@@ -110,8 +169,9 @@ body {
   }
 
   .nav-item {
+    background-color: dimgrey;
     display: inline;
-    padding: 20px 20px;
+    padding: 30px 20px;
     width: auto;
   }
 }

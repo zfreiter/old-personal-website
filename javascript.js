@@ -13,7 +13,9 @@ bars.onclick = function () {
 x.onclick = function () {
   bars.className = "fa-solid fa-bars fa-2x";
   x.className = "fa-solid fa-xmark fa-2x";
-  navItems.forEach((item) => {
-    item.className = "nav-item";
-  });
+  const addClass = ["one", "two", "three"];
+
+  for (let i = 0; i < 3; i++) {
+    navItems[i].className = "nav-item " + addClass[i];
+  }
 };
