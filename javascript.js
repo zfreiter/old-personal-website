@@ -7,7 +7,6 @@ const navItems = document.querySelectorAll(".nav-item");
 const form = document.getElementById("contact-form");
 
 // element to change pictures
-const body = document.querySelector(body);
 const picture = document.querySelector(".first-picture");
 const secondPicture = document.querySelector(".second-picture");
 
