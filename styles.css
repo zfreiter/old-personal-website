@@ -7,24 +7,48 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  margin: 0px;
-  overflow-x: hidden;
-}
-
 :root {
   --dark-jungle-green: #1a1f16;
   --forest-green-traditional: #1e3f20;
   --magic-mint: #94ecbe;
 }
 
-/* Body container */
+/* body styles for mobile */
+body {
+  margin: 0px;
+  overflow-x: hidden;
+  font-family: Avenir, Avenir Light, "Times New Roman", Times, serif;
+  font-size: 1rem;
+  width: 0;
+  min-width: 100%;
+}
+/* h1 style for mobile */
+h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 2rem;
+}
+
+h2 {
+  font-family: Avenir, "Times New Roman", Times, serif;
+  font-size: 1rem;
+}
+
+h3 {
+  font-family: Avenir light, "Times New Roman", Times, serif;
+  font-size: 0.8rem;
+}
+
+ul {
+  font-family: Avenir Light, "Times New Roman", Times, serif;
+  font-size: 0.75rem;
+}
+
+/* Container that wraps the body */
 .body-container {
   text-align: center;
-  justify-content: center;
   width: 90%;
   margin: auto;
-  max-width: 800px;
+  max-width: 720px;
 }
 
 /* Navagation Bar section*/
@@ -81,6 +105,8 @@ body {
   display: inherit;
   animation: 3s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-left both;
 }
+
+/* Keyframes work with the animation */
 @keyframes wipe-in-left {
   from {
     right: -100%;
@@ -127,12 +153,12 @@ body {
   outline-offset: -1.5px;
 }
 
-/* First section -> About me */
+/* Section for about me */
 .section:first-of-type {
   padding-top: 100px;
 }
 
-/* css for sections*/
+/* General css for sections */
 .section {
   display: inline-block;
   padding-top: 200px;
@@ -143,13 +169,27 @@ body {
   flex-direction: column;
 }
 
-figure {
-  margin: auto;
+.skill-container,
+.education-container {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
-p.intro {
-  width: 0;
-  min-width: 100%;
+.ul-skills {
+  background-color: var(--magic-mint);
+  color: var(--dark-jungle-green);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+figure {
+  margin: auto;
 }
 
 .picture {
@@ -158,15 +198,19 @@ p.intro {
   height: auto;
 }
 
-.intro-skills {
-  margin-top: 100px;
-}
-
 /* form area */
 .form-section {
   width: 100%;
+  padding-bottom: 20px;
 }
 
+form {
+  padding: 25px;
+  background-color: var(--magic-mint);
+  border-radius: 4px;
+}
+
+/* grid area for form */
 .grid-contact {
   display: grid;
   gap: 10px;
@@ -179,30 +223,72 @@ p.intro {
     "submit"
     "reset";
 }
+
 .name {
   grid-area: name;
+  border-radius: 4px;
 }
+
 .email {
   grid-area: email;
+  border-radius: 4px;
 }
+
 .message {
   grid-area: message;
+  border-radius: 4px;
 }
 
 .submit {
   color: aliceblue;
   background-color: #1e3f20;
   grid-area: submit;
+  border-radius: 4px;
 }
 
 .reset {
   color: aliceblue;
   background-color: #1e3f20;
   grid-area: reset;
+  border-radius: 4px;
 }
 
-@media screen and (min-width: 680px) {
-  /* Navagation Bar section*/
+/* media for larger viewing */
+@media screen and (min-width: 620px) {
+  body {
+    font-size: 1.2em;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-family: Avenir, "Times New Roman", Times, serif;
+    font-size: 2rem;
+  }
+  h3 {
+    font-family: Avenir light, "Times New Roman", Times, serif;
+    font-size: 1.5rem;
+  }
+
+  ul {
+    font-family: Avenir Light, "Times New Roman", Times, serif;
+    font-size: 1rem;
+  }
+
+  .ul-skills {
+    padding: 5px;
+    border-radius: 8px;
+  }
+
+  .skill-container,
+  .education-container {
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Navagation Bar section for larger viewing */
   .nav-container {
     background-color: #1a1f16;
     flex-direction: row;
@@ -227,7 +313,7 @@ p.intro {
     width: auto;
   }
 
-  /* Form */
+  /* Form section for larger viewing */
   .grid-contact {
     display: grid;
 
