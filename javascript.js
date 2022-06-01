@@ -31,6 +31,7 @@ x.onclick = function () {
   }
 };
 
+// Functions to change the about me section pictures.
 picture.addEventListener("mouseover", function () {
   picture.style.display = "none";
   secondPicture.style.display = "block";
