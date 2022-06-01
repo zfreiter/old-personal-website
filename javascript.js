@@ -6,6 +6,11 @@ const navItems = document.querySelectorAll(".nav-item");
 // element to clear the submit button
 const form = document.getElementById("contact-form");
 
+// element to change pictures
+const figure = document.querySelector("figure");
+const picture = document.querySelector(".first-picture");
+const secondPicture = document.querySelector(".second-picture");
+
 // Opens the navbar
 bars.onclick = function () {
   bars.className += "fa-solid fa-bars fa-2x hide";
@@ -25,6 +30,16 @@ x.onclick = function () {
     navItems[i].className = "nav-item " + addClass[i];
   }
 };
+
+picture.addEventListener("mouseover", function () {
+  picture.style.display = "none";
+  secondPicture.style.display = "block";
+});
+
+secondPicture.addEventListener("mouseout", function () {
+  picture.style.display = "block";
+  secondPicture.style.display = "none";
+});
 
 // Resets the form
 form.addEventListener("submit", function (event) {

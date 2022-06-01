@@ -192,12 +192,27 @@ figure {
   margin: auto;
 }
 
-.picture {
+.picture,
+.second-picture {
   width: 100%;
   border-radius: 8px;
   height: auto;
+  padding: 5px;
+  background-color: var(--magic-mint);
+  border-radius: 8px;
 }
 
+.second-picture {
+  display: none;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  background-color: var(--magic-mint);
+  border-radius: 8px;
+}
 /* form area */
 .form-section {
   width: 100%;
