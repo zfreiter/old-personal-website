@@ -285,6 +285,7 @@ form {
     justify-content: center;
     flex-wrap: wrap;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 
