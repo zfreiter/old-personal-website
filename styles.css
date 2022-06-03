@@ -5,6 +5,7 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+  overflow-x: hidden;
 }
 
 :root {
@@ -16,7 +17,6 @@ html {
 /* body styles for mobile */
 body {
   margin: 0px;
-  overflow-x: hidden;
   font-family: Avenir, Avenir Light, "Times New Roman", Times, serif;
   font-size: 1rem;
   width: 0;
