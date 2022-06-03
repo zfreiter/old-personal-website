@@ -45,10 +45,10 @@ ul {
 
 /* Container that wraps the body */
 .body-container {
-  text-align: center;
   width: 90%;
   margin: auto;
   max-width: 720px;
+  text-align: center;
 }
 
 /* Navagation Bar section*/
@@ -60,6 +60,7 @@ ul {
   width: 100%;
 }
 
+/* This wraps the home, bars and x parts of the navbar */
 .nav-item-top {
   background-color: #1a1f16;
   display: flex;
@@ -75,6 +76,36 @@ ul {
   color: aliceblue;
 }
 
+#bars-open {
+  color: aliceblue;
+  font-size: x-large;
+  padding: 30px 20px;
+  display: inline-block;
+}
+
+#bars-open.hide {
+  display: none;
+}
+
+#x-close.show {
+  display: inline-block;
+}
+
+#x-close {
+  color: aliceblue;
+  font-size: x-large;
+  padding: 30px 20px;
+  display: none;
+}
+
+/* Color change on hove for home, bars, and x of the navbar */
+.home:hover,
+#bars-open:hover,
+#x-close:hover {
+  color: var(--magic-mint);
+}
+
+/* Styles for other navBar items*/
 .nav-item {
   font-size: x-large;
   padding: 10px 20px;
@@ -119,34 +150,7 @@ ul {
   }
 }
 
-#bars-open {
-  color: aliceblue;
-  font-size: x-large;
-  padding: 30px 20px;
-  display: inline-block;
-}
-
-#bars-open.hide {
-  display: none;
-}
-
-#x-close.show {
-  display: inline-block;
-}
-
-#x-close {
-  color: aliceblue;
-  font-size: x-large;
-  padding: 30px 20px;
-  display: none;
-}
-
-.home:hover,
-#bars-open:hover,
-#x-close:hover {
-  color: var(--magic-mint);
-}
-
+/* color change and outline for the rest of the navBar */
 .nav-item:nth-child(n + 2):hover {
   color: var(--magic-mint);
   outline: 1px solid var(--magic-mint);
