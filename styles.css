@@ -58,6 +58,7 @@ ul {
   position: sticky;
   top: 0;
   width: 100%;
+  z-index: 1;
 }
 
 /* This wraps the home, bars and x parts of the navbar */
@@ -114,6 +115,7 @@ ul {
   width: 100%;
   display: none;
   position: relative;
+  user-select: none;
 }
 
 .nav-item.show {
@@ -217,6 +219,83 @@ video {
   background-color: var(--magic-mint);
   border-radius: 8px;
 }
+
+/* Slideshow for projects */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+.projectSlides {
+  display: none;
+}
+
+.numbertext {
+  position: absolute;
+  top: 0;
+}
+.text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 8px;
+}
+.dot-container {
+  text-align: center;
+}
+
+.dots {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  color: var(--dark-jungle-green);
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* form area */
 .form-section {
   width: 100%;
