@@ -222,24 +222,29 @@ video {
 
 /* Slideshow for projects */
 .slideshow-container {
-  width: 100%;
+  max-width: 720px;
   position: relative;
   margin: auto;
 }
 .projectSlides {
   display: none;
 }
-
+.project-img {
+  width: 100%;
+}
 .numbertext {
   position: absolute;
   top: 0;
 }
+
 .text {
   position: absolute;
+  padding: 8px 12px;
   width: 100%;
   text-align: center;
   bottom: 8px;
 }
+
 .dot-container {
   text-align: center;
 }
