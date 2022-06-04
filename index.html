@@ -143,52 +143,57 @@
       <!-- section for project -->
       <section class="section" id="project">
         <!-- flex-container for each section -->
-        <div class="flex-container">
+        <div class="flex-container slideshow-pad">
           <!-- skills header -->
           <h1 class="project-into">projects</h1>
-
+          <h2>Hello World</h2>
           <!-- video of hello world -->
-          <video src="video/hello.mp4" muted loop autoplay>
-            Video not supported
-          </video>
-          <p>Slideshow to come for projects.</p>
+          <figure>
+            <video src="video/hello.mp4" muted loop autoplay>
+              Video not supported
+            </video>
+            <figcaption>
+              The first project all computer science students do
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Slide show goes here -->
+        <div class="slideshow-container">
+          <!-- Project 1 -->
+          <div class="projectSlides fade">
+            <div class="numbertext">1 / 2</div>
+            <figure width="100%">
+              <a href="https://placeholder.com"
+                ><img
+                  src="https://via.placeholder.com/720x350?text=first"
+                  class="project-img"
+              /></a>
+            </figure>
+            <div class="text">Project one</div>
+          </div>
+          <!-- Project 2 -->
+          <div class="projectSlides fade">
+            <div class="numbertext">2 / 2</div>
+            <figure width="100%">
+              <a href="https://placeholder.com"
+                ><img
+                  src="https://via.placeholder.com/720x350?text=second"
+                  class="project-img"
+              /></a>
+            </figure>
+            <div class="text">Project two</div>
+          </div>
+          <!-- Arrow keys to go backwards / forwards-->
+          <a class="prev">&#10094;</a>
+          <a class="next">&#10095;</a>
+        </div>
+        <!-- Clickable dots to go to each project -->
+        <div class="dot-container">
+          <span class="dots dot-one"></span>
+          <span class="dots dot-two"></span>
         </div>
       </section>
-      <!-- Slide show goes here -->
-      <div class="slideshow-container">
-        <!-- Project 1 -->
-        <div class="projectSlides fade">
-          <div class="numbertext">1 / 2</div>
-          <figure width="100%">
-            <a href="https://placeholder.com"
-              ><img
-                src="https://via.placeholder.com/720x350?text=first"
-                class="project-img"
-            /></a>
-          </figure>
-          <div class="text">Project one</div>
-        </div>
-        <!-- Project 2 -->
-        <div class="projectSlides fade">
-          <div class="numbertext">2 / 2</div>
-          <figure width="100%">
-            <a href="https://placeholder.com"
-              ><img
-                src="https://via.placeholder.com/720x350?text=second"
-                class="project-img"
-            /></a>
-          </figure>
-          <div class="text">Project two</div>
-        </div>
-        <!-- Arrow keys to go backwards / forwards-->
-        <a class="prev">&#10094;</a>
-        <a class="next">&#10095;</a>
-      </div>
-      <!-- Clickable dots to go to each project -->
-      <div class="dot-container">
-        <span class="dots dot-one"></span>
-        <span class="dots dot-two"></span>
-      </div>
 
       <!-- section for form -->
       <section class="section form-section" id="contact">

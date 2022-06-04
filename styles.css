@@ -220,11 +220,16 @@ video {
   border-radius: 8px;
 }
 
+.slideshow-pad {
+  padding-bottom: 50px;
+}
+
 /* Slideshow for projects */
 .slideshow-container {
   max-width: 720px;
   position: relative;
   margin: auto;
+  outline: 1px solid var(--magic-mint);
 }
 .projectSlides {
   display: none;
