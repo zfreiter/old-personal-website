@@ -17,11 +17,12 @@ html {
 /* body styles for mobile */
 body {
   margin: 0px;
-  font-family: Avenir, Avenir Light, "Times New Roman", Times, serif;
+  font-family: Georgia, Avenir Light, "Times New Roman", Times, serif;
   font-size: 1rem;
   width: 0;
   min-width: 100%;
 }
+
 /* h1 style for mobile */
 h1 {
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -71,7 +72,7 @@ ul {
 }
 
 .home {
-  padding: 30px 20px;
+  padding: 20px 20px;
   text-decoration: none;
   font-size: x-large;
   color: aliceblue;
@@ -80,7 +81,7 @@ ul {
 #bars-open {
   color: aliceblue;
   font-size: x-large;
-  padding: 30px 20px;
+  padding: 20px 20px;
   display: inline-block;
 }
 
@@ -95,7 +96,7 @@ ul {
 #x-close {
   color: aliceblue;
   font-size: x-large;
-  padding: 30px 20px;
+  padding: 20px 20px;
   display: none;
 }
 
@@ -182,6 +183,7 @@ ul {
   flex-direction: column;
 }
 
+/* table for skill section */
 table {
   padding: 20px 20px 20px 0;
   margin-bottom: 20px;
@@ -198,18 +200,6 @@ tr:nth-child(even) {
   background-color: var(--magic-mint);
 }
 
-.ul-skills {
-  background-color: var(--magic-mint);
-  color: var(--dark-jungle-green);
-  padding: 10px;
-  border-radius: 4px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
 figure {
   margin: auto;
 }
@@ -217,7 +207,6 @@ figure {
 .picture,
 .second-picture {
   width: 100%;
-  border-radius: 8px;
   height: auto;
   padding: 5px;
   background-color: var(--magic-mint);
@@ -234,28 +223,36 @@ video {
   padding: 5px;
   background-color: var(--magic-mint);
   border-radius: 8px;
+  user-select: none;
 }
 
+/* Slideshow for projects */
 .slideshow-pad {
   padding-bottom: 50px;
 }
 
-/* Slideshow for projects */
 .slideshow-container {
   max-width: 720px;
+  max-height: auto;
   position: relative;
   margin: auto;
-  outline: 1px solid var(--magic-mint);
 }
+
 .projectSlides {
   display: none;
 }
+
 .project-img {
   width: 100%;
+  padding: 5px;
+  background-color: var(--magic-mint);
+  border-radius: 8px;
 }
 .numbertext {
   position: absolute;
-  top: 0;
+  top: 8px;
+  left: 8px;
+  font-size: larger;
 }
 
 .text {
@@ -292,10 +289,11 @@ video {
   color: var(--dark-jungle-green);
   width: auto;
   margin-top: -22px;
-  padding: 16px;
+  padding: 15px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  font-size: x-large;
 }
 
 .next {
@@ -331,6 +329,8 @@ video {
 form {
   padding: 5px;
   background-color: var(--magic-mint);
+  border-radius: 8px;
+  padding: 5px;
   border-radius: 4px;
 }
 
@@ -415,11 +415,6 @@ footer p {
     padding: 0;
   }
 
-  .ul-skills {
-    padding: 5px;
-    border-radius: 8px;
-  }
-
   .skill-container,
   .education-container {
     justify-content: center;
@@ -449,8 +444,30 @@ footer p {
   .nav-item {
     background-color: var(--dark-jungle-green);
     display: inline;
-    padding: 30px 20px;
+    padding: 20px 10px;
     width: auto;
+  }
+
+  /* slideshow for larger viewing*/
+  .numbertext {
+    font-size: x-large;
+  }
+
+  .text {
+    font-size: x-large;
+  }
+
+  .dots {
+    height: 25px;
+    width: 25px;
+    margin: 0 5px;
+  }
+
+  .prev,
+  .next {
+    padding: 15px;
+    font-size: 55px;
+    margin-top: -32px;
   }
 
   /* Form section for larger viewing */
