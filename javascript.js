@@ -42,16 +42,40 @@ secondPicture.addEventListener("mouseout", function () {
 });
 
 // Resets the form
-// I used this code below
+// I used the event.preventDefault and for.reset from the site below
+// But I also had them on an earlier HW.  Listing both to be safe.
 // 6.	https://bobbyhadz.com/blog/ javascript-clear-input-field-after-submit#:~:text=To%20clear%20all%20form%20fields%20after%20submitting%3A&text=When%20the%20form%20is%20submitted,fields%20to%20their%20default%20state
+
+function validateForm() {
+  let name = document.forms[0].elements[0].value;
+  let email = document.forms[0].elements[1].value;
+  let message = document.forms[0].elements[2].value;
+
+  if (!name) {
+    alert("The name portion of the contact form needs to be filled out.");
+    return false;
+  } else if (!email) {
+    alert("The email portion of the contact form needs to be filled out.");
+    return false;
+  } else {
+    if (!message) {
+      alert("The message portion of the contact form needs to be filled out.");
+      return false;
+    }
+    return true;
+  }
+}
+
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  form.reset();
+  if (validateForm()) {
+    form.reset();
+  }
 });
 
 // Slideshow code
-// I used w3school tutorial for the Javascript below
+// I used w3school tutorial for the Javascript below with some modifications
 // https://www.w3schools.com/howto/howto_js_slideshow.asp
 let slideIndex = 1;
 showSlides(slideIndex);

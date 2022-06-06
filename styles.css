@@ -25,7 +25,7 @@ body {
   min-width: 100%;
 }
 
-/* h1 style for mobile */
+/* h1, h2, h3 style for mobile */
 h1 {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 2rem;
@@ -47,7 +47,7 @@ img {
   height: auto;
 }
 
-/* Container that wraps the body */
+/* Container that wraps the body of the project */
 .body-container {
   width: 90%;
   margin: auto;
@@ -108,6 +108,7 @@ img {
 #bars-open:hover,
 #x-close:hover {
   color: var(--magic-mint);
+  outline: 1px solid var(--magic-mint);
 }
 
 /* Styles for other navBar items*/
@@ -126,23 +127,23 @@ img {
     and the timing part was changed.*/
 .nav-item.show {
   display: inherit;
-  animation: 1.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-left both;
+  animation: 1s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-left both;
 }
 .nav-item.show.one {
   display: inherit;
-  animation: 1.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-left both;
+  animation: 1s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-left both;
 }
 .nav-item.show.two {
   display: inherit;
-  animation: 2s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-left both;
+  animation: 1.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-left both;
 }
 .nav-item.show.three {
   display: inherit;
-  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-left both;
+  animation: 2s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-left both;
 }
 .nav-item.show.four {
   display: inherit;
-  animation: 3s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-left both;
+  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-left both;
 }
 
 /* Keyframes work with the animation */
@@ -181,6 +182,7 @@ img {
   flex-direction: column;
 }
 
+/* container for skill and education sections */
 .skill-container,
 .education-container {
   justify-content: center;
@@ -209,6 +211,7 @@ figure {
   margin: auto;
 }
 
+/* Pictures for about me */
 .picture,
 .second-picture {
   width: 100%;
@@ -222,6 +225,7 @@ figure {
   display: none;
 }
 
+/* Style for video in project section */
 video {
   width: 100%;
   height: auto;
@@ -285,7 +289,7 @@ https://www.w3schools.com/howto/howto_js_slideshow.asp */
 
 .active,
 .dot:hover {
-  background-color: #717171;
+  background-color: var(--magic-mint);
 }
 
 .prev,
@@ -384,6 +388,7 @@ form {
   border-radius: 4px;
 }
 
+/* Styles for footer */
 footer {
   width: 100%;
   height: 75px;
@@ -428,6 +433,14 @@ footer p {
   .nav-container {
     background-color: #1a1f16;
     flex-direction: row;
+  }
+
+  .nav-item.show,
+  .nav-item.show.one,
+  .nav-item.show.two,
+  .nav-item.show.three,
+  .nav-item.show.four {
+    animation: none;
   }
 
   #bars-open,
