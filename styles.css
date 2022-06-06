@@ -389,8 +389,8 @@ footer {
   height: 75px;
   text-align: left;
   margin-top: 25px;
-  color: var(--forest-green-traditional);
-  border-top: 2px solid var(--forest-green-traditional);
+  color: var(--dark-jungle-green);
+  border-top: 2px solid var(--dark-jungle-green);
   background-color: var(--magic-mint);
 }
 
