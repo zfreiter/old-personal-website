@@ -10,10 +10,12 @@ html {
 
 :root {
   --dark-jungle-green: #1a1f16;
-  --forest-green-traditional: #1e3f20;
+  --forest-green-traditional: #3d8b42;
   --magic-mint: #94ecbe;
+  --buttons: #37703b;
 }
 
+/* Styles for mobile */
 /* body styles for mobile */
 body {
   margin: 0px;
@@ -31,7 +33,7 @@ h1 {
 
 h2 {
   font-family: Avenir, "Times New Roman", Times, serif;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 h3 {
@@ -39,9 +41,10 @@ h3 {
   font-size: 0.8rem;
 }
 
-ul {
-  font-family: Avenir Light, "Times New Roman", Times, serif;
-  font-size: 0.75rem;
+/* Styles for responsive imag.  DO NOT REMOVE */
+img {
+  width: 100%;
+  height: auto;
 }
 
 /* Container that wraps the body */
@@ -74,13 +77,13 @@ ul {
 .home {
   padding: 20px 20px;
   text-decoration: none;
-  font-size: x-large;
+  font-size: 1em;
   color: aliceblue;
 }
 
 #bars-open {
   color: aliceblue;
-  font-size: x-large;
+  font-size: 1em;
   padding: 20px 20px;
   display: inline-block;
 }
@@ -95,7 +98,7 @@ ul {
 
 #x-close {
   color: aliceblue;
-  font-size: x-large;
+  font-size: 1em;
   padding: 20px 20px;
   display: none;
 }
@@ -109,7 +112,7 @@ ul {
 
 /* Styles for other navBar items*/
 .nav-item {
-  font-size: x-large;
+  font-size: 1em;
   padding: 10px 20px;
   text-decoration: none;
   color: aliceblue;
@@ -119,6 +122,8 @@ ul {
   user-select: none;
 }
 
+/* The animation CSS was used from 3.	https://www.transition.style/ 
+    and the timing part was changed.*/
 .nav-item.show {
   display: inherit;
   animation: 1.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-in-left both;
@@ -226,7 +231,8 @@ video {
   user-select: none;
 }
 
-/* Slideshow for projects */
+/* Slideshow for projects. I followed the totorial from w3schools
+https://www.w3schools.com/howto/howto_js_slideshow.asp */
 .slideshow-pad {
   padding-bottom: 50px;
 }
@@ -319,6 +325,7 @@ video {
     opacity: 1;
   }
 }
+/* end of slideshow */
 
 /* form area */
 .form-section {
@@ -365,14 +372,14 @@ form {
 
 .submit {
   color: aliceblue;
-  background-color: #1e3f20;
+  background-color: var(--buttons);
   grid-area: submit;
   border-radius: 4px;
 }
 
 .reset {
   color: aliceblue;
-  background-color: #1e3f20;
+  background-color: var(--buttons);
   grid-area: reset;
   border-radius: 4px;
 }
@@ -408,13 +415,6 @@ footer p {
     font-size: 1.5rem;
   }
 
-  ul {
-    font-family: Avenir Light, "Times New Roman", Times, serif;
-    font-size: 1rem;
-    list-style-type: none;
-    padding: 0;
-  }
-
   .skill-container,
   .education-container {
     justify-content: center;
@@ -448,7 +448,7 @@ footer p {
     width: auto;
   }
 
-  /* slideshow for larger viewing*/
+  /* slideshow for larger viewing */
   .numbertext {
     font-size: x-large;
   }
@@ -479,5 +479,12 @@ footer p {
       "name email"
       "message message"
       "submit reset";
+  }
+  .name,
+  .email,
+  .message,
+  .submit,
+  .reset {
+    font-size: 1em;
   }
 }

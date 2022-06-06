@@ -42,6 +42,8 @@ secondPicture.addEventListener("mouseout", function () {
 });
 
 // Resets the form
+// I used this code below
+// 6.	https://bobbyhadz.com/blog/ javascript-clear-input-field-after-submit#:~:text=To%20clear%20all%20form%20fields%20after%20submitting%3A&text=When%20the%20form%20is%20submitted,fields%20to%20their%20default%20state
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
@@ -49,6 +51,8 @@ form.addEventListener("submit", function (event) {
 });
 
 // Slideshow code
+// I used w3school tutorial for the Javascript below
+// https://www.w3schools.com/howto/howto_js_slideshow.asp
 let slideIndex = 1;
 showSlides(slideIndex);
 const prev = document.querySelector(".prev");
